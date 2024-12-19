@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napiste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body id="home">
+    <nav id="navbar">
+        <div id="logo">
+            <a href="index.html"><img src="./img/2logo_matu.png" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="Co je obezita.html">Poznejte obezitu</a></li>
+            <li><a href="Jak na obezitu.html">Jak na obezitu</a></li>
+            <li><a href="Forum.html">Fórum</a></li>
+            <li><a href="napiste.html">Napište nám</a></li>
+        </ul>
+    </nav>
+    <div class="prihlas_container">
+        <div class="formular_prihlaseni">
+            <h1 id="prihalseni_nadpis">Sdělte svůj příběh</h1>
+            <div class="prihlas_div">
+                <label class="prihlaseni" for="name">Uživatelské jméno</label>
+                <input type="text" class="prihlaseni_pole" id="name" autofocus="" tabindex="1" autocapitalize="off" autocorrect="off" autocomplete="name" requiredname="name" value="">
+            </div>
+            <div class="prihlas_div">
+                <label class="prihlaseni" for="Email">E-mail</label>
+                <input type="text" class="prihlaseni_pole" id="Email" autofocus="" tabindex="1" autocapitalize="off" autocorrect="off" autocomplete="Email" requiredname="Email" value="">
+            </div>
+            <div class="prihlas_div">
+                <label class="prihlaseni" for="Telefon">Telefon</label>
+                <input type="text" class="prihlaseni_pole" id="Telefon" autofocus="" tabindex="1" autocapitalize="off" autocorrect="off"  requiredname="Telefon" value="">
+            </div>
+            <div class="prihlas_div">
+                <label class="prihlaseni" for="messg">Napište nám</label>  
+                <textarea name="messg" id="messg"></textarea>
+            </div>
+            <div class="prihlas_div">
+                <button id="button" type="submit" tabindex="2">
+                    <span class="prihlasit_submit"></span>
+                    <span id="prihlaseni_text">Odeslat</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer id="main-footer">
+        <div class="copy-width">
+            <p>Copyright &copy; 2023, Oa Opava</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
