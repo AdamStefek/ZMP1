@@ -31,6 +31,7 @@ h2 {
     font-size: 22px
 }
 html{
+    width: 100%;
     height: 100%;
 }
 
@@ -56,6 +57,7 @@ body {
     background-position: center;
     background: #333 url("../img/obezita_background.jpg") no-repeat center center/cover;
     height: 100vh;
+    width: 100%;
 }
 
 .evropa_stat {
@@ -64,8 +66,15 @@ body {
     object-fit: contain;
     height: 600px;
     width: 900px;
+    max-width: 100%;
 
 } 
+
+.evropa_stav_div{
+    max-width: 100%;
+    margin-right: 15px;
+
+}
 
 #navbar {
     position: fixed;
@@ -79,11 +88,24 @@ body {
     justify-content: space-between;
     padding: 1rem;
     flex-wrap: wrap;
-    width: 98%;
+    width: 99%;
     font-size: 1.075rem;
     transition: all 0.3s ease-in-out;
     box-shadow: 3px 0 100px #333333;
     z-index: 999;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+.material-symbols-outlined {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
 }
     
 #navbar a {
@@ -113,22 +135,7 @@ body {
     transition: transform 0.3s ease; 
 }
 
-@media only screen and (max-width: 700px){
-    #navbar {
-        margin: auto;
-        padding: auto;
-        text-align: left;
-        justify-content: flex-start;
-    }
-    #navbar ul {
-        flex-direction: row;
-        margin-top: 1rem;
-    }
-    #navbar ul li {
-        margin: auto;
-    }
 
-}
 
 .container {
     color: aliceblue;
@@ -144,6 +151,7 @@ body {
     max-width: 100%;
 
 }
+
 .con_text h1{
     padding-top: 25px;
     margin-left: 20px;
@@ -154,6 +162,33 @@ body {
 }
 
 .con_text p{
+    margin-top: 50px;
+    padding-left: 25px;
+    padding-top: 15px;
+    font-size: 25px;
+    line-height: 35px;
+
+}
+
+.con_text1{
+    background-color: rgb(0, 0, 0, 0.1);
+    padding-top: 60px;
+    padding-left: 35px;
+    text-align: left;
+    max-width: 100%;
+
+}
+
+.con_text1 h1{
+    padding-top: 25px;
+    margin-left: 20px;
+    color: aliceblue;
+    font-size: 100px;
+    line-height: 87.5px;
+
+}
+
+.con_text1 p{
     margin-top: 50px;
     padding-left: 25px;
     padding-top: 15px;
@@ -471,7 +506,7 @@ footer {
     background-color: rgb(38, 36, 36, 0.5);
 }
 
-.tg  {border-collapse:collapse;border-spacing:0;}
+.tg  {border-collapse:collapse;border-spacing:0; max-width: 100%; margin-right: 15px;}
 .tg td{border-color:black;border-style:solid;border-width:2px;font-family:"Parkinsans", sans-serif;font-size:14px;
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:2px;font-family:"Parkinsans", sans-serif;font-size:14px;
@@ -481,3 +516,526 @@ footer {
 .tg .tg-vox4{font-size:16px;font-weight:bold;text-align:left;vertical-align:top}
 .tg .tg-cqfb{font-size:16px;text-align:left;vertical-align:middle}
 .tg .tg-cbs6{font-size:15px;text-align:left;vertical-align:top}
+
+@media only screen and (max-width: 600px) {
+    .hamburger {
+        display: block;
+        padding-right: 5px;
+    }
+    .hamburger.active .material-symbols-outlined:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .material-symbols-outlined:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .material-symbols-outlined:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    h1 {
+        font-size: 22px
+    }
+    
+    h2 {
+        font-size: 16px
+    }
+    .con_text{
+        background-color: rgb(0, 0, 0, 0.1);
+        padding-top: 25px;
+        padding-left: 15px;
+        text-align: left;
+        max-width: 100%;
+    }
+    .container {
+        padding-top: 20px;
+    }
+
+    .con_text h1 {
+        font-size: 50px;
+        max-width: 100%;
+        line-height: 40px;
+    }
+    .con_text p {
+        font-size: 25px;
+        max-width: 70%;
+    }
+    #navbar ul {
+        text-align: center;
+        width: 100%;
+        background-color: rgb(38, 36, 36,);
+        flex-direction: column;
+        gap: 0;
+        top: 70px;
+        left: -100%;
+        position: fixed;
+        padding: 0px 0px 0px 15px;
+        display: flexbox;
+        list-style: none;
+        align-items: center;
+        transition: 0.3sec;
+    }
+    #navbar a {
+        margin: 16px 0;
+    }
+    #navbar ul.active{
+        left: 0;
+    }
+
+    #navbar ul li a {
+        padding: 0.15rem;
+        margin: auto; 
+        text-align: right;
+        color: rgb(255, 255, 255);
+    }
+    #navbar li {
+        padding: auto;
+    }
+
+    .co_box {
+        border: black solid 1px;   
+        max-width: 80px;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 26px;
+        max-height: 400px;
+    }
+    .co_box h3 {
+        font-size: 12px;
+        width: 85px;
+    }
+    .co_box p {
+        font-size: 11px;
+    }
+    .zarovnani::before {
+        content: "";
+        position: absolute;
+        border: #000000 solid 5px;
+        border-width: 5px;
+        width: 80px;
+        margin: auto;
+        z-index: 998;
+        left: 0;
+        right: 0;
+        top: 670px;
+    }
+
+    .onasvid {
+        padding: 0;
+    }
+
+    body {
+        max-width: 100%;
+        height: 100%;
+    }
+    #navbar {
+        font-size: 10px;
+        max-width: 100%;
+        height: 4%;
+        padding: 5px;
+    }
+    #navbar #logo img {
+        height: 30px;
+    }
+    .obsah {
+        max-width: 120px;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding: 5px;
+    }
+    
+    .obsahitems_codelame {
+        display: flex;
+        padding: 1rem;
+        max-width: 100%;
+    }
+    .onas {
+        max-width: 70px;
+        font-size: 11px;
+        max-height: 50px;
+        margin: 75px 0px 10px 15px;
+    }
+
+
+    .video {
+        max-width: 100%;
+    }
+
+    #proc {
+        color: white;
+        padding-left: 10px;
+        font-weight: 800; 
+        text-align: left;
+    }
+    
+    .proc_backgrnd {
+        background: #222222;
+        padding: 10px 0 0 0;
+    }
+    
+    .proc_box {
+        color: white;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 5px;
+        padding-left: 5px;
+        text-decoration: none;
+    }
+    .proc_box li {
+        font-size: 14px;
+    }
+
+    .proc_box ul li a{
+        color: white;
+        text-decoration: none;
+    }
+    #proc_h2 {
+        color: white;
+        font-size: 17px;
+    }
+
+    .obsahitems_codelame {
+        display: flex;
+        padding: 0.25rem;
+    }
+    #main-footer {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+    h1 {
+        font-size: 28px
+    }
+    
+    h2 {
+        font-size: 22px
+    }
+    .con_text{
+        background-color: rgb(0, 0, 0, 0.1);
+        padding-top: 60px;
+        padding-left: 15px;
+        text-align: left;
+        max-width: 100%;
+    }
+    .container {
+        padding-top: 40px;
+    }
+
+    .con_text h1 {
+        font-size: 65px;
+        max-width: 100%;
+        line-height: 60px;
+    }
+    .con_text p {
+        font-size: 35px;
+        max-width: 100%;
+    }
+    #showcase {
+        width: 100%;
+    }
+
+    #navbar ul {
+        gap: 5px;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        padding-right: 20px;
+    }
+    #navbar a {
+        margin: 16px 0;
+    }
+
+    #navbar ul li a {
+        padding: 0.15rem;
+        margin: auto; 
+        text-align: right;
+        color: rgb(255, 255, 255);
+    }
+    #navbar li {
+        padding: auto;
+    }
+
+    .co_box {
+        border: black solid 1px;   
+        max-width: 160px;
+        width: 100%;
+        padding: auto;
+        margin-bottom: 26px;
+        max-height: 425px;
+    }
+    .co_box h3 {
+        font-size: 20px;
+        width: 150px;
+    }
+    .co_box p {
+        font-size: 15px;
+    }
+    .zarovnani::before {
+        content: "";
+        position: absolute;
+        border: #000000 solid 5px;
+        border-width: 5px;
+        width: 80px;
+        margin: auto;
+        z-index: 998;
+        left: 0;
+        right: 0;
+        top: 725px;
+    }
+
+    .onasvid {
+        padding: 0;
+    }
+
+    body {
+        max-width: 100%;
+        height: 100%;
+    }
+    #navbar {
+        font-size: 17px;
+        width: 99%;
+        height: 5%;
+    }
+    #navbar #logo img {
+        height: 60px;
+    }
+    .obsah {
+        max-width: 190px;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+    }
+    
+    .obsahitems_codelame {
+        align-items: center;
+        display: flex;
+        padding: 0px 15px 0px 0px;
+
+    }
+    .containeritems_delame {
+        margin: auto;
+        display: flex;
+    }
+
+    .onas {
+        max-width: 115px;
+        font-size: 15px;
+        max-height: 110px;
+    }
+
+
+    .video {
+        max-width: 100%;
+    }
+
+    #proc {
+        color: white;
+        padding-left: 10px;
+        font-weight: 800; 
+        text-align: left;
+    }
+    
+    .proc_backgrnd {
+        background: #222222;
+        padding: 10px 0 0 0;
+    }
+    
+    .proc_box {
+        color: white;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 5px;
+        padding-left: 5px;
+        text-decoration: none;
+    }
+    .proc_box li {
+        font-size: 17px;
+    }
+
+    .proc_box ul li a{
+        color: white;
+        text-decoration: none;
+    }
+    #proc_h2 {
+        color: white;
+        font-size: 25px;
+    }
+
+    #main-footer {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1000px) {
+    h1 {
+        font-size: 28px
+    }
+    
+    h2 {
+        font-size: 24px
+    }
+    .con_text{
+        background-color: rgb(0, 0, 0, 0.1);
+        padding-top: 60px;
+        padding-left: 15px;
+        text-align: left;
+        max-width: 100%;
+    }
+    .container {
+        padding-top: 40px;
+    }
+
+    .con_text h1 {
+        font-size: 80px;
+        max-width: 100%;
+        line-height: 60px;
+    }
+    .con_text p {
+        font-size: 45px;
+        max-width: 80%;
+        line-height: 50px;
+    }
+    #showcase {
+        width: 100%;
+    }
+
+    #navbar ul {
+        gap: 12px;
+        display: flex;
+        list-style: none;
+        align-items: center;
+        padding-right: 20px;
+    }
+    #navbar a {
+        margin: 16px 0;
+    }
+
+    #navbar ul li a {
+        padding: 0.15rem;
+        margin: auto; 
+        text-align: right;
+        color: rgb(255, 255, 255);
+    }
+    #navbar li {
+        padding: auto;
+    }
+
+    .co_box {
+        border: black solid 1px;   
+        max-width: 160px;
+        width: 100%;
+        padding: auto;
+        margin-bottom: 26px;
+        max-height: 445px;
+    }
+    .co_box h3 {
+        font-size: 20px;
+        width: 150px;
+    }
+    .co_box p {
+        font-size: 17px;
+        margin-bottom: 35px;
+    }
+    .zarovnani::before {
+        content: "";
+        position: absolute;
+        border: #000000 solid 5px;
+        border-width: 5px;
+        width: 80px;
+        margin: auto;
+        z-index: 998;
+        left: 0;
+        right: 0;
+        top: 875px;
+    }
+
+    .onasvid {
+        padding: 0;
+    }
+
+    body {
+        max-width: 100%;
+        height: 100%;
+    }
+    #navbar {
+        font-size: 18px;
+        width: 100%;
+        height: 5%;
+    }
+    #navbar #logo img {
+        height: 60px;
+    }
+    .obsah {
+        max-width: 190px;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+    }
+    
+    .obsahitems_codelame {
+        align-items: center;
+        display: flex;
+        padding: 0px 15px 0px 0px;
+
+    }
+    .containeritems_delame {
+        margin: auto;
+        display: flex;
+    }
+
+    .onas {
+        max-width: 105px;
+        font-size: 17px;
+        max-height: 130px;
+    }
+
+
+    .video {
+        max-width: 100%;
+    }
+
+    #proc {
+        color: white;
+        padding-left: 10px;
+        font-weight: 800; 
+        text-align: left;
+    }
+    
+    .proc_backgrnd {
+        background: #222222;
+        padding: 10px 0 0 0;
+    }
+    
+    .proc_box {
+        color: white;
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 5px;
+        padding-left: 5px;
+        text-decoration: none;
+    }
+    .proc_box p {
+        font-size: 18px;
+    }
+    .proc_box li {
+        font-size: 20px;
+    }
+
+    .proc_box ul li a{
+        color: white;
+        text-decoration: none;
+    }
+    #proc_h2 {
+        color: white;
+        font-size: 30px;
+    }
+
+    #main-footer {
+        width: 100%;
+    }
+}
