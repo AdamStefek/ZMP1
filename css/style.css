@@ -320,10 +320,14 @@ body {
 }
 
 .video{
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 90px
+    padding-bottom: 90px;
+    height: 550px;
+    width: 1000px;
+    max-width: 100%;
 }
 
 #proc {
