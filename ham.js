@@ -1,7 +1,11 @@
-const hamburger = document.querySelector(".hamburger");
-const ul = document.querySelector("#navbarul");
+function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    menu.classList.toggle('active');
+}
 
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    ul.classList.toggle("active");
-})
+
+document.querySelectorAll('#nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('nav-menu').classList.remove('active');
+    });
+});

@@ -94,10 +94,7 @@ body {
     box-shadow: 3px 0 100px #333333;
     z-index: 999;
 }
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
+
 .material-symbols-outlined {
     display: block;
     width: 25px;
@@ -213,6 +210,7 @@ body {
     text-align: center;
     text-decoration: none;
     z-index: 990;
+    border-radius: 8px;
 }
 
 .onas:hover {
@@ -521,20 +519,37 @@ footer {
 .tg .tg-cqfb{font-size:16px;text-align:left;vertical-align:middle}
 .tg .tg-cbs6{font-size:15px;text-align:left;vertical-align:top}
 
+.burger-menu {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
-    .hamburger {
+    .burger-menu {
         display: block;
-        padding-right: 5px;
+        font-size: 20px;
     }
-    .hamburger.active .material-symbols-outlined:nth-child(2) {
-        opacity: 0;
+
+    #nav-menu {
+        text-align: center;
+        font-size: 15px;
+        width: 100%;
+        background-color: rgb(38, 36, 36, 0.90);
+        flex-direction: column;
+        gap: 0;
+        top: 30px;
+        left: -200%;
+        position: fixed;
+        padding: 0px 0px 0px 15px;
+        display: flexbox;
+        list-style: none;
+        align-items: center;
+        transition: 0.3sec;
     }
-    .hamburger.active .material-symbols-outlined:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+
+    #nav-menu.active {
+        display: flex;
     }
-    .hamburger.active .material-symbols-outlined:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
+
 
     h1 {
         font-size: 22px
@@ -563,21 +578,8 @@ footer {
         font-size: 25px;
         max-width: 70%;
     }
-    #navbar ul {
-        text-align: center;
-        width: 100%;
-        background-color: rgb(38, 36, 36,);
-        flex-direction: column;
-        gap: 0;
-        top: 70px;
-        left: -100%;
-        position: fixed;
-        padding: 0px 0px 0px 15px;
-        display: flexbox;
-        list-style: none;
-        align-items: center;
-        transition: 0.3sec;
-    }
+
+
     #navbar a {
         margin: 16px 0;
     }

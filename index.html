@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obezita.cz</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" >
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" type="image/jpg" href="./img/2logo_matu.png">
     <script src="ham.js"></script>
@@ -14,19 +14,15 @@
         <div id="logo">
             <a href="index.html"><img src="./img/2logo_matu.png" alt="Logo"></a>
         </div>
-        <ul>
-            <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="Co_je_obezita.html">Poznejte obezitu</a></li>
-            <li><a href="Jak_na_obezitu.html">Jak na obezitu</a></li>
-            <li><a href="receptar.html">Receptář</a></li>
-            <li><a href="napiste.html">Napište nám</a></li>
-        </ul>
-        <div class="hamburger">
-            <span class="material-symbols-outlined"></span>
-            <span class="material-symbols-outlined"></span>
-            <span class="material-symbols-outlined"></span>
-          </div>
-    </nav>
+        <div class="burger-menu" onclick="toggleMenu()">&#9776;</div>
+            <ul id="nav-menu">
+                <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="Co_je_obezita.html">Poznejte obezitu</a></li>
+                <li><a href="Jak_na_obezitu.html">Jak na obezitu</a></li>
+                <li><a href="receptar.html">Receptář</a></li>
+                <li><a href="napiste.html">Napište nám</a></li>
+            </ul>
+        </nav>
     <div id="showcase">
         <div class="container">
             <div class="con_text">
